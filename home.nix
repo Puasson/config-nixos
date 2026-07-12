@@ -10,7 +10,6 @@
      ./sessions/default.nix
      ./sessions/hypridle.nix
      ./programs/fastfetch/fastfetch.nix
-     ./programs/git/git.nix
      ./programs/mpv/mpv.nix
      ./programs/swaync/swaync.nix
      ./shell/bash.nix
@@ -40,6 +39,7 @@
    nixd
    nil
    python314
+   git
    # tools
    oh-my-posh
    btop
@@ -69,4 +69,5 @@
    lua-language-server
    stylua
   ];
+  services.ssh-agent.enable = true;
 }
