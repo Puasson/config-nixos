@@ -1,0 +1,122 @@
+* {
+  font-family: "Ubuntu Sans", "FiraCode Nerd Font", sans-serif;
+  font-size: 13px;
+}
+
+/* ===========================
+   Ventana principal — Deep Obsidian
+   =========================== */
+
+window {
+  background-color: rgba(17, 17, 17, 0.7);
+  border: none;
+  border-radius: 12px;
+  color: #E6EEE1;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.65);
+}
+
+/* ===========================
+   Caja de búsqueda — Crimson Red accent
+   =========================== */
+
+#input {
+  background-color: rgba(208, 44, 63, 0.15);
+  color: #F0F0F0;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 14px;
+  margin: 10px 10px 6px;
+  font-size: 14px;
+  outline: none;
+  caret-color: #D02C3F;
+}
+
+#input:focus {
+  background-color: rgba(208, 44, 63, 0.28);
+}
+
+/* ===========================
+   Contenedores
+   =========================== */
+
+#outer-box {
+  background: transparent;
+  padding: 0;
+}
+
+#inner-box {
+  background: transparent;
+  margin: 4px 6px 8px;
+}
+
+#scroll {
+  background: transparent;
+  margin: 0 4px;
+}
+
+/* ===========================
+   Texto
+   =========================== */
+
+#text {
+  color: #E6EEE1;
+  padding: 0 8px;
+}
+
+#text:selected {
+  color: #111111;
+}
+
+/* ===========================
+   Entradas
+   =========================== */
+
+#entry {
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 10px;
+  margin: 2px 0;
+  transition: all 150ms ease;
+}
+
+#entry:hover,
+#entry:focus {
+  background-color: rgba(240, 240, 240, 0.08);
+  outline: none;
+}
+
+#entry:selected,
+#entry.selected {
+  background-color: #D02C3F;
+  color: #FFFFFF;
+  border-radius: 8px;
+}
+
+/* ===========================
+   Iconos
+   =========================== */
+
+#img {
+  margin-right: 8px;
+  border-radius: 6px;
+}
+
+/* ===========================
+   Scrollbar
+   =========================== */
+
+scrollbar {
+  background: transparent;
+  width: 4px;
+}
+
+scrollbar slider {
+  background-color: rgba(74, 74, 74, 0.60);
+  border-radius: 4px;
+  min-height: 20px;
+}
+
+scrollbar slider:hover {
+  background-color: #D02C3F;
+}

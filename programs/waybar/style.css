@@ -1,0 +1,232 @@
+* {
+  font-family: "Ubuntu Sans", "FiraCode Nerd Font", sans-serif;
+  font-size: 12px;
+  min-height: 0;
+  border: none;
+  border-radius: 0;
+}
+
+/* ===========================
+   Ventana principal
+   =========================== */
+
+window#waybar {
+  background-color: transparent;
+  color: #F0F0F0;
+}
+
+/* ===========================
+   Contenedores — colores distintos por zona
+   =========================== */
+
+/* LEFT — Deep Obsidian */
+.modules-left {
+  background-color: rgba(17, 17, 17, 0.85);
+  border-radius: 5px;
+  margin: 0 2px;
+  padding: 0 4px;
+}
+
+/* CENTER — Crimson Red */
+.modules-center {
+  background-color: rgba(208, 44, 63, 0.9);
+  border-radius: 5px;
+  margin: 0 2px;
+  padding: 0 4px;
+}
+
+/* RIGHT — Charcoal Grey */
+.modules-right {
+  background-color: rgba(163, 211, 247, 0.9);
+  border-radius: 5px;
+  margin: 0 2px;
+  padding: 0 4px;
+}
+
+/* ===========================
+   Launcher
+   =========================== */
+
+#custom-launcher {
+  color: #F0F0F0;
+  font-size: 15px;
+  padding: 0 8px;
+  margin: 2px;
+  background-color: rgba(240, 240, 240, 0.10);
+  border-radius: 7px;
+  transition: all 150ms ease;
+}
+
+#custom-launcher:hover {
+  background-color: rgba(208, 44, 63, 0.9);
+  color: #FFFFFF;
+}
+
+/* ===========================
+   Workspaces
+   =========================== */
+
+#workspaces {
+  padding: 0 2px;
+}
+
+#workspaces button {
+  padding: 0 6px;
+  color: rgba(240, 240, 240, 0.45);
+  border-radius: 6px;
+  background: transparent;
+  transition: all 150ms ease;
+}
+
+#workspaces button.active {
+  color: #111111;
+  background-color: #F0F0F0;
+  font-weight: bold;
+}
+
+#workspaces button.urgent {
+  color: #FFFFFF;
+  background-color: rgba(208, 44, 63, 0.9);
+  animation: blink 0.8s linear infinite;
+}
+
+#workspaces button:hover {
+  color: #FFFFFF;
+  background-color: rgba(240, 240, 240, 0.15);
+}
+
+#workspaces button.special {
+  color: #A3D2F7;
+}
+
+@keyframes blink {
+  0%   { opacity: 1; }
+  50%  { opacity: .45; }
+  100% { opacity: 1; }
+}
+
+/* ===========================
+   Ventana activa
+   =========================== */
+
+#window {
+  color: rgba(240, 240, 240, 0.70);
+  padding: 0 8px;
+  font-style: italic;
+  font-size: 11px;
+}
+
+/* ===========================
+   Reloj
+   =========================== */
+
+#clock {
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 0 10px;
+}
+
+/* ===========================
+   MPRIS
+   =========================== */
+
+#mpris {
+  color: rgba(208, 44, 63, 0.9);
+  padding: 0 6px;
+  font-size: 13px;
+}
+
+#mpris.paused {
+  color: rgb(74, 74, 74);
+}
+
+/* ===========================
+   Audio
+   =========================== */
+
+#pulseaudio {
+  color: #111111;
+  padding: 0 6px;
+}
+
+#pulseaudio.muted {
+  color: #4a4a4a;
+}
+
+#pulseaudio.source-muted {
+  color: #4a4a4a;
+}
+
+/* ===========================
+   Red
+   =========================== */
+
+#network {
+  color: #111111;
+  padding: 0 6px;
+}
+
+#network.disconnected,
+#network.disabled {
+  color: #111111;
+}
+
+/* ===========================
+   CPU
+   =========================== */
+
+#cpu {
+  color: #111111;
+  padding: 0 6px;
+}
+
+/* ===========================
+   Memoria
+   =========================== */
+
+#memory {
+  color: #111111;
+  padding: 0 6px;
+}
+
+/* ===========================
+   Tray
+   =========================== */
+
+#tray {
+  color: #3a162b;
+  padding: 0 4px;
+}
+
+/* ===========================
+   Botón de apagado
+   =========================== */
+
+#custom-power {
+  color: #d02c3f;
+  padding: 0 10px;
+  font-size: 12px;
+  transition: all 150ms ease;
+}
+
+#custom-power:hover {
+  color: #FFFFFF;
+  background-color: rgba(208, 44, 63, 0.9);
+  border-radius: 6px;
+}
+
+/* ===========================
+   Tooltips
+   =========================== */
+
+tooltip {
+  background-color: rgba(18, 18, 18, 0.9);
+  border-radius: 8px;
+  color: #E6EEE1;
+  padding: 4px 8px;
+}
+
+tooltip label {
+  color: #E6EEE1;
+}

@@ -1,0 +1,296 @@
+* {
+  font-family: "Ubuntu Sans", "FiraCode Nerd Font", sans-serif;
+  font-size: 13px;
+  all: unset;
+  box-sizing: border-box;
+}
+
+/* ===========================
+   Control center — Deep Obsidian
+   =========================== */
+
+.control-center {
+  background-color: rgba(17, 17, 17, 0.87);
+  border-radius: 12px;
+  color: #E6EEE1;
+  padding: 8px 6px;
+}
+
+/* ===========================
+   Label superior (spacer)
+   =========================== */
+
+.widget-label {
+  color: transparent;
+  min-height: 4px;
+}
+
+/* ===========================
+   Título + botón limpiar
+   =========================== */
+
+.widget-title {
+  color: #F0F0F0;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 14px 4px;
+}
+
+.widget-title > button {
+  background-color: rgba(208, 44, 63, 0.20);
+  color: #D02C3F;
+  border-radius: 8px;
+  padding: 4px 10px;
+  font-size: 13px;
+  transition: all 150ms ease;
+}
+
+.widget-title > button:hover {
+  background-color: #D02C3F;
+  color: #FFFFFF;
+}
+
+/* ===========================
+   Do Not Disturb
+   =========================== */
+
+.widget-dnd {
+  color: #E6EEE1;
+  font-size: 13px;
+  padding: 4px 14px 6px;
+}
+
+.widget-dnd > switch {
+  background-color: rgba(74, 74, 74, 0.60);
+  border-radius: 20px;
+  min-width: 42px;
+  min-height: 22px;
+  transition: all 150ms ease;
+}
+
+.widget-dnd > switch:checked {
+  background-color: #D02C3F;
+}
+
+.widget-dnd > switch slider {
+  background-color: #F0F0F0;
+  border-radius: 50%;
+  min-width: 18px;
+  min-height: 18px;
+  margin: 2px;
+}
+
+/* ===========================
+   Buttons grid
+   =========================== */
+
+.widget-buttons-grid {
+  padding: 6px 10px;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button {
+  background-color: rgba(240, 240, 240, 0.07);
+  color: #E6EEE1;
+  border-radius: 10px;
+  font-size: 16px;
+  padding: 10px 14px;
+  margin: 3px;
+  transition: all 150ms ease;
+  min-width: 48px;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button:hover {
+  background-color: rgba(208, 44, 63, 0.25);
+  color: #FFFFFF;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button.active {
+  background-color: #D02C3F;
+  color: #FFFFFF;
+}
+
+/* ===========================
+   MPRIS
+   =========================== */
+
+.widget-mpris {
+  background-color: rgba(74, 74, 74, 0.35);
+  border-radius: 10px;
+  margin: 6px 10px;
+  padding: 8px;
+  color: #E6EEE1;
+}
+
+.widget-mpris-album-art {
+  border-radius: 10px;
+}
+
+.widget-mpris-title {
+  font-weight: bold;
+  font-size: 14px;
+  color: #F0F0F0;
+}
+
+.widget-mpris-subtitle {
+  font-size: 12px;
+  color: #A3D2F7;
+}
+
+.widget-mpris > box > button {
+  background-color: transparent;
+  color: #E6EEE1;
+  border-radius: 8px;
+  padding: 4px 8px;
+  font-size: 16px;
+  transition: all 150ms ease;
+}
+
+.widget-mpris > box > button:hover {
+  background-color: rgba(208, 44, 63, 0.25);
+  color: #FFFFFF;
+}
+
+/* ===========================
+   Notificaciones — ventana flotante
+   =========================== */
+
+.notification-row {
+  padding: 4px 8px;
+}
+
+.notification {
+  background-color: rgba(17, 17, 17, 0.856);
+  border-radius: 10px;
+  padding: 10px 12px;
+  color: #E6EEE1;
+  transition: all 150ms ease;
+}
+
+.notification:hover {
+  background-color: rgba(74, 74, 74, 0.50);
+}
+
+/* Urgencia baja */
+.notification.low {
+  background-color: rgba(17, 17, 17, 0.90);
+}
+
+/* Urgencia normal */
+.notification.normal {
+  background-color: rgba(17, 17, 17, 0.97);
+}
+
+/* Urgencia crítica — acento Crimson */
+.notification.critical {
+  background-color: rgba(208, 44, 63, 0.20);
+}
+
+.notification-content {
+  padding: 4px 0;
+}
+
+.notification-default-action {
+  background: transparent;
+  border-radius: 8px;
+  padding: 0;
+}
+
+.notification-default-action:hover {
+  background-color: rgba(240, 240, 240, 0.06);
+}
+
+.notification-action-button {
+  background-color: rgba(240, 240, 240, 0.07);
+  color: #E6EEE1;
+  border-radius: 7px;
+  padding: 4px 10px;
+  font-size: 12px;
+  margin: 2px;
+  transition: all 150ms ease;
+}
+
+.notification-action-button:hover {
+  background-color: #D02C3F;
+  color: #FFFFFF;
+}
+
+/* ===========================
+   Título y cuerpo de notificación
+   =========================== */
+
+.notification-app-name {
+  font-size: 11px;
+  color: #A3D2F7;
+  font-weight: bold;
+}
+
+.notification-app-icon {
+  border-radius: 6px;
+}
+
+.notification-summary {
+  font-size: 13px;
+  font-weight: bold;
+  color: #F0F0F0;
+}
+
+.notification-body {
+  font-size: 12px;
+  color: rgba(230, 238, 225, 0.80);
+}
+
+.notification-time {
+  font-size: 11px;
+  color: rgba(230, 238, 225, 0.45);
+}
+
+/* ===========================
+   Botón cerrar notificación
+   =========================== */
+
+.close-button {
+  background-color: transparent;
+  color: rgba(230, 238, 225, 0.50);
+  border-radius: 6px;
+  padding: 2px 6px;
+  font-size: 12px;
+  transition: all 150ms ease;
+}
+
+.close-button:hover {
+  background-color: #D02C3F;
+  color: #FFFFFF;
+}
+
+/* ===========================
+   Sin notificaciones
+   =========================== */
+
+.blank-window {
+  background: transparent;
+}
+
+.notification-list:empty label {
+  color: rgba(230, 238, 225, 0.35);
+  font-size: 13px;
+  padding: 24px;
+}
+
+/* ===========================
+   Scrollbar
+   =========================== */
+
+scrollbar {
+  background: transparent;
+  width: 4px;
+}
+
+scrollbar slider {
+  background-color: rgba(74, 74, 74, 0.55);
+  border-radius: 4px;
+  min-height: 20px;
+}
+
+scrollbar slider:hover {
+  background-color: #D02C3F;
+}
