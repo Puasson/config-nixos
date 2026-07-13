@@ -16,7 +16,7 @@
        datos = "cd /mnt/Datos";
        nrs   = "sudo nixos-rebuild switch --flake $HOME/nixos#nixos";
        dellete = "sudo nix-collect-garbage -d";
-       update = "nix flake update $HOME/nixos";
+       update = "nix flake update";
     };
 
     profileExtra = ''

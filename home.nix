@@ -30,6 +30,7 @@
    audacity
    tauon
    pinta
+   cmus
    # office
    papers
    onlyoffice-desktopeditors
