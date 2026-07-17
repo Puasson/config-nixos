@@ -8,9 +8,9 @@
    =========================== */
 
 window {
-  background-color: rgba(17, 17, 17, 0.7);
+  background-color: rgba(17, 17, 17, 0.8);
   border: none;
-  border-radius: 12px;
+  border-radius: 10px;
   color: #E6EEE1;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.65);
 }
