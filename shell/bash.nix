@@ -25,4 +25,5 @@
        fi
     '';
   };
+ services.ssh-agent.enable = true;
 }

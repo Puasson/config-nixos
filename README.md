@@ -1,39 +1,44 @@
 # ❄️ config-nixos
 
-Configuración declarativa de NixOS para mi sistema personal. Gestionada con [Nix Flakes](https://nixos.wiki/wiki/Flakes) y [Home Manager](https://github.com/nix-community/home-manager).
+> Declarative NixOS configuration for my personal system — managed with [Nix Flakes](https://nixos.wiki/wiki/Flakes) and [Home Manager](https://github.com/nix-community/home-manager).
+
+![preview](preview/preview1.png)
+
+<p align="center">
+  <img src="preview/preview2.png" width="49%" />
+  <img src="preview/preview3.png" width="49%" />
+</p>
 
 ---
 
-## Estructura
+## ✨ Features
 
-```
-config-nixos/
-├── flake.nix              # Punto de entrada principal del flake
-├── flake.lock             # Lockfile de dependencias
-├── hosts/                 # Configuraciones por máquina
-│   ├── default.nix
-│   └── <hostname>/
-│       ├── configuration.nix
-│       └── hardware-configuration.nix
-├── modules/               # Módulos reutilizables del sistema
-│   ├── desktop/
-│   ├── fonts/
-│   ├── networking/
-│   └── services/
-└── home/                  # Configuración de Home Manager
-    ├── default.nix
-    ├── programs/
-    └── dotfiles/
-```
+| Feature | Description |
+|---|---|
+| **Flakes** | Fully reproducible builds with pinned `flake.lock` |
+| **Home Manager** | User-space dotfiles and program management |
+| **Hyprland** | Wayland compositor with idle & session config |
+| **Waybar** | Custom status bar with CSS theming |
+| **Wofi** | App launcher with custom styles |
+| **Swaync** | Notification center |
+| **Kitty** | GPU-accelerated terminal |
+| **Fastfetch** | System info with custom logos |
 
 ---
 
-## Requisitos previos
+## 📦 Main Inputs
 
-- NixOS instalado con Flakes habilitados
-- Git
+| Input | Description |
+|---|---|
+| `nixpkgs` | Stable NixOS package channel |
+| `home-manager` | User environment management |
 
-Para habilitar Flakes, agrega esto a tu `/etc/nixos/configuration.nix`:
+---
+
+## 🛠 Prerequisites
+
+- NixOS installed
+- Flakes enabled
 
 ```nix
 nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -41,86 +46,67 @@ nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
 ---
 
-## Instalación
+## 🚀 Installation
 
-1. Clona el repositorio:
+**1. Clone the repository**
 
 ```bash
-git clone https://github.com/<tu-usuario>/config-nixos.git ~/.config/nixos
+git clone https://github.com/Puasson/config-nixos.git ~/.config/nixos
 cd ~/.config/nixos
 ```
 
-2. Revisa y ajusta la configuración de hardware:
+**2. Generate hardware configuration**
 
 ```bash
 nixos-generate-config --show-hardware-config
-# Copia la salida a hosts/<hostname>/hardware-configuration.nix
+# Copy output to hosts/<hostname>/hardware-configuration.nix
 ```
 
-3. Aplica la configuración del sistema:
+**3. Apply system configuration**
 
 ```bash
 sudo nixos-rebuild switch --flake .#<hostname>
 ```
 
-4. Aplica la configuración de Home Manager (opcional):
+**4. Apply Home Manager configuration** *(optional)*
 
 ```bash
-home-manager switch --flake .#<usuario>
+home-manager switch --flake .#<username>
 ```
 
 ---
 
-## Uso
+## ⚙️ Usage
 
-### Reconstruir el sistema
+### Rebuild the system
 
 ```bash
-# Aplicar cambios
+# Apply changes
 sudo nixos-rebuild switch --flake .#<hostname>
 
-# Probar sin aplicar permanentemente
+# Test without permanently activating
 sudo nixos-rebuild test --flake .#<hostname>
 
-# Ver el resultado sin activarlo
+# Build without activating
 sudo nixos-rebuild build --flake .#<hostname>
 ```
 
-### Actualizar dependencias
+### Update dependencies
 
 ```bash
 nix flake update
 sudo nixos-rebuild switch --flake .#<hostname>
 ```
 
-### Revertir a una generación anterior
+### Roll back to a previous generation
 
 ```bash
 sudo nixos-rebuild switch --rollback
-# o desde el bootloader al iniciar
+# or select a previous generation from the bootloader at startup
 ```
 
 ---
 
-## Características
-
-- **Flakes** — entorno reproducible con `flake.lock`
-- **Home Manager** — gestión de dotfiles y programas de usuario
-- **Módulos modulares** — configuración separada por funcionalidad
-- **Múltiples hosts** — soporte para diferentes máquinas desde un solo repositorio
-
----
-
-## Dependencias principales
-
-| Entrada | Descripción |
-|--------|-------------|
-| `nixpkgs` | Canal principal de paquetes NixOS |
-| `home-manager` | Gestión del entorno de usuario |
-| `nixpkgs-unstable` | Paquetes en versión más reciente (opcional) |
-
----
-
-## Licencia
+## 📄 License
 
 [MIT](LICENSE)

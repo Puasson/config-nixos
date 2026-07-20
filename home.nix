@@ -55,6 +55,7 @@
    networkmanagerapplet
    awww
    hypridle
+   slurp
    # GTK and QT
    qt6.qtwayland
    qt5.qtwayland
@@ -69,5 +70,4 @@
    lua-language-server
    stylua
   ];
-  services.ssh-agent.enable = true;
 }

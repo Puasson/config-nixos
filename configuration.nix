@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, inputs, ... }:
 
 {
   imports =
@@ -74,6 +74,7 @@
   };
   
   environment.systemPackages = with pkgs; [
+  inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
     wget
     udiskie
     tree 
